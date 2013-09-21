@@ -7,10 +7,11 @@ struct node_t
 }node;
 
 node * create_list(int );
+/*
 node * append_list(int);
 node * delete_list(int);
 node * insert_list(int);
-
+*/
 int main ()
 {
 // create a linked list
@@ -18,6 +19,7 @@ node * head_node = NULL;
 
 head_node = create_list(8);
 
+printf(" head node var= %d\n",head_node->var);
 // append a list
 
 // delete a list
