@@ -27,3 +27,15 @@ head_node = create_list(8);
 
 return 1;
 }
+
+/* Function to create a linked list */
+node * create_list(int vari)
+{
+  node *ptr = NULL;
+  ptr = (node *) malloc(sizeof(node *));
+  ptr ->var = vari;
+  ptr->next = NULL;
+
+
+return ptr;
+}
