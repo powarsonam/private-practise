@@ -1,12 +1,14 @@
 #include<stdio.h>
+#include<malloc.h>
 // global definition
 struct node_t
 {
   int var;
   struct node_t *next;
-}node;
+};
 
-node * create_list(int );
+struct node_t node;
+struct node_t * create_list(int );
 /*
 node * append_list(int);
 node * delete_list(int);
@@ -15,7 +17,7 @@ node * insert_list(int);
 int main ()
 {
 // create a linked list
-node * head_node = NULL;
+struct node_t * head_node = NULL;
 
 head_node = create_list(8);
 
@@ -31,10 +33,10 @@ return 1;
 }
 
 /* Function to create a linked list */
-node * create_list(int vari)
+struct node_t * create_list(int vari)
 {
-  node *ptr = NULL;
-  ptr = (node *) malloc(sizeof(node *));
+  struct node_t *ptr = NULL;
+  ptr = (struct node_t *) malloc(sizeof(struct node_t *));
   ptr ->var = vari;
   ptr->next = NULL;
 
